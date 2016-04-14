@@ -1,20 +1,13 @@
 # SomeWeather
 
-**TODO: Add description**
+Exercise from Programming Elixir 1.2 to create an application to pull data 
+from an XML feed and display it in a table.
 
-## Installation
+Exercise requirements:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+In the United States, the National Oceanic and Atmospheric Administration
+provides hourly XML feeds of conditions at 1,800 locations. 8 For example:
+http://w1.weather.gov/xml/current_obs/KDTO.xml .
 
-  1. Add some_weather to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:some_weather, "~> 0.0.1"}]
-        end
-
-  2. Ensure some_weather is started before your application:
-
-        def application do
-          [applications: [:some_weather]]
-        end
-
+Write an application that fetches this data, parses it, and displays it in a
+nice format.
