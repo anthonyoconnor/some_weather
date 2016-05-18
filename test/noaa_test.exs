@@ -9,9 +9,8 @@ defmodule NOAATest do
       "http://w1.weather.gov/xml/current_obs/ABC.xml" 
   end
 
-  #This is more of an integration tests since it actually hits
-  #the website and expects to get an error back
-  test "anything" do
+  @tag :external
+  test "Error is returned when a non existent id is used" do
     assert match?  {:error, _}, fetch("shouldNeverExistHopefully")
   end
 end
