@@ -1,4 +1,5 @@
 defmodule SomeWeather.NOAA do
+
   @user_agent [{"User-agent", "Elixir test program"}]
   def fetch(id) do
     url(id)
@@ -17,4 +18,6 @@ defmodule SomeWeather.NOAA do
   def handle_reponse({_, %{status_code: _, body: body}}) do
     {:error, body}
   end
+
+  
 end

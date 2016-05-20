@@ -27,5 +27,15 @@ defmodule SomeWeather.CLI do
 
   def process(id) do
    SomeWeather.NOAA.fetch(id) 
+   |> decode_response
+   |> SomeWeather.WeatherExtractor.extract
+  end
+
+  def decode_response({:ok, body}), do: body
+
+  def decode_response({:error, error }) do
+    message = error["message"]
+    IO.puts "Error trying to receive latest data. Message: #{message}"
+    System.halt(2)
   end
 end
