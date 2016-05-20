@@ -33,9 +33,8 @@ defmodule SomeWeather.CLI do
 
   def decode_response({:ok, body}), do: body
 
-  def decode_response({:error, error }) do
-    message = error["message"]
-    IO.puts "Error trying to receive latest data. Message: #{message}"
+  def decode_response({:error,  _ }) do
+    IO.puts "Error trying to receive latest data."
     System.halt(2)
   end
 end
