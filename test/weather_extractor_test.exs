@@ -15,9 +15,9 @@ defmodule WeatherExtractorTest do
     """
     output = extract(sample_xml)
 
-    assert output[:location] == 'Somewhere'
-    assert output[:station_id] == 'ABC'
-    assert output[:temp_c] == '40.0'
-    assert output[:weather] == 'warm'
+    assert output["location"] == 'Somewhere'
+    assert output["station id"] == 'ABC'
+    assert output["temp degrees C"] == '40.0'
+    assert output["weather"] == 'warm'
   end
 end

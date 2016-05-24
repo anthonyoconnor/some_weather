@@ -1,6 +1,5 @@
 defmodule NOAATest do
   use ExUnit.Case
-  doctest SomeWeather
 
   import SomeWeather.NOAA
 

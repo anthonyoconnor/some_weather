@@ -29,6 +29,7 @@ defmodule SomeWeather.CLI do
    SomeWeather.NOAA.fetch(id) 
    |> decode_response
    |> SomeWeather.WeatherExtractor.extract
+   |> SomeWeather.TableFormatter.print
   end
 
   def decode_response({:ok, body}), do: body

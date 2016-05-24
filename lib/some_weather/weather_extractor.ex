@@ -18,7 +18,7 @@ defmodule SomeWeather.WeatherExtractor do
     station_id = extract(xml, '/current_observation/station_id')
     weather = extract(xml, '/current_observation/weather')
     temp_c = extract(xml, '/current_observation/temp_c')
-    %{location: location, station_id: station_id, weather: weather, temp_c: temp_c}
+    %{"location" =>  location, "station id" => station_id, "weather" => weather, "temp degrees C" => temp_c}
   end
 
   defp extract(xml, xpath) do
