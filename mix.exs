@@ -3,6 +3,7 @@ defmodule SomeWeather.Mixfile do
 
   def project do
     [app: :some_weather,
+     escript: escript_config,
      version: "0.0.1",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
@@ -30,5 +31,9 @@ defmodule SomeWeather.Mixfile do
     [
       {:httpoison, "~> 0.8"}
     ]
+  end
+
+  defp escript_config do
+    [ main_module: SomeWeather.CLI ]
   end
 end
