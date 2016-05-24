@@ -19,7 +19,7 @@ defmodule TableFormatterTest do
   end
   
   test "Output is correct" do
-    data = %{"a" => "x", "bb" => "yyy"}
+    data = %{"a" => 'x', "bb" => "yyy"}
     result = capture_io fn ->
       print(data)
     end

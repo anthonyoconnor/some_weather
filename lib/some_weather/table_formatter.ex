@@ -3,7 +3,7 @@ defmodule SomeWeather.TableFormatter do
 
   def print(weather) do
     
-    with data_by_columns = [Map.keys(weather), Map.values(weather)],
+    with data_by_columns = [printable_list(Map.keys(weather)), printable_list(Map.values(weather))],
     column_widths   = widths_of(data_by_columns),
     format          = format_for(column_widths)
 
@@ -15,6 +15,13 @@ defmodule SomeWeather.TableFormatter do
       end
     end
 
+  end
+  
+  def printable(str) when is_binary(str), do: str
+  def printable(str), do: to_string(str)
+
+  def printable_list(list) do
+    Enum.map(list, &(printable(&1)))
   end
 
   def widths_of(columns) do
