@@ -16,13 +16,13 @@ Write an application that fetches this data, parses it, and displays it in a
 nice format.
 
 ## Package Application
-Run mix escript.build
+    mix escript.build
 
 ## Usage
-./some_weather <airport_id>
+    ./some_weather <airport_id>
 
 ### Example 
-./some_weather KDTO
+    ./some_weather KDTO
 
 ## Example Output
 
