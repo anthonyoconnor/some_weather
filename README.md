@@ -1,7 +1,10 @@
 # SomeWeather
 
-Exercise from Programming Elixir 1.2 to create an application to pull data 
-from an XML feed and display it in a table.
+This is a basic application that pulls some weather data from the 
+National Oceanic and Atmospheric Administration and displays it in a table.
+
+This is an exercise from Programming Elixir 1.2 used for learning Elixir.
+So don't take anything in here as best practices. 
 
 Exercise requirements:
 
@@ -11,3 +14,25 @@ http://w1.weather.gov/xml/current_obs/KDTO.xml .
 
 Write an application that fetches this data, parses it, and displays it in a
 nice format.
+
+## Package Application
+Run mix escript.build
+
+## Usage
+./some_weather <airport_id>
+
+### Example 
+./some_weather KDTO
+
+## Example Output
+
+    ---------------+-----------------------------
+    location       | Denton Municipal Airport, TX
+    ---------------+-----------------------------
+    station id     | KDTO
+    ---------------+-----------------------------
+    temp degrees C | 27.2
+    ---------------+-----------------------------
+    weather        | Overcast
+    ---------------+-----------------------------
+
