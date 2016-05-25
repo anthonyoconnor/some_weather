@@ -21,6 +21,8 @@ nice format.
 ## Usage
     ./some_weather <airport_id>
 
+Note: The list of airport ids can be found at http://w1.weather.gov/xml/current_obs/
+
 ### Example 
     ./some_weather KDTO
 
